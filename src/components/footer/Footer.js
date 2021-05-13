@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Grid, makeStyles, Typography, Paper } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
@@ -9,8 +9,14 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     left: 0,
     margin: 0,
-    padding: 0,
+    paddingBottom: 10,
     width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      height: 150,
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 100,
+    },
     backgroundColor: theme.palette.primary.main,
     borderTop: '4px solid ' + theme.palette.secondary.main,
     color: 'white',
@@ -47,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles();
   return (
-    <Box className={classes.footerBox}>
+    <Paper elevation={20} className={classes.footerBox}>
       <Grid
         container
         alignItems="center"
@@ -66,7 +72,7 @@ function Footer() {
                 <Typography>Email: eboerchers@yahoo.ca</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography>Phone: 403-461-9531</Typography>
+                <Typography>Phone: (403) 461-9531</Typography>
               </Grid>
             </Grid>
           </Box>
@@ -91,7 +97,7 @@ function Footer() {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </Paper>
   );
 }
 

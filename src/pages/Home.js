@@ -2,11 +2,12 @@ import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import { useEffect } from 'react';
 import bgImage from '../assets/images/home_background.jpg';
+import Quote from '../components/home/Quote.js';
 
 const useStyles = makeStyles({
   homeContainer: {
     position: 'relative',
-    minHeight: '100vh',
+    minHeight: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -15,8 +16,8 @@ const useStyles = makeStyles({
   },
 
   bgImage: {
-    position: 'absolute',
     margin: 'auto',
+    filter: 'brightness(50%)',
   },
   quoteBox: {
     position: 'absolute',
@@ -34,9 +35,9 @@ function Home() {
 
   return (
     <div className={classes.homeContainer}>
-      <img className={classes.bgImage} src={bgImage} />
+      {/* <img className={classes.bgImage} src={bgImage} /> */}
       <div className={classes.quoteBox}>
-        <h1> Text</h1>
+        <Quote />
       </div>
     </div>
   );

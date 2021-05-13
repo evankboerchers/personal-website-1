@@ -16,15 +16,35 @@ import Transcripts from './pages/Transcripts';
 import theme from './theme.js';
 import { ThemeProvider } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   pageContainer: {
     position: 'relative',
     minHeight: '100vh',
+    width: '100%',
+    padding: 0,
+    boxSizing: 'border-box',
+    overflowX: 'hidden',
+    overflowY: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
   },
 
+  mainWrap: {
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 56,
+      paddingBottom: 160,
+    },
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: 64,
+      paddingBottom: 110,
+    },
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+  },
   contentWrap: {
-    paddingTop: 64,
-    paddingBottom: '2.5rem',
+    margin: 20,
   },
 }));
 
@@ -34,13 +54,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Navbar />
-        <span className={classes.appBarWrap}></span>
         <div className={classes.pageContainer}>
-          <main>
-            <div className={classes.contentWrap}>
-              <Switch>
-                <Route exact path="/" component={Home}></Route>
+          <Navbar />
+          <main className={classes.mainWrap}>
+            <Switch>
+              <Route exact path="/" component={Home}></Route>
+              <div className={classes.contentWrap}>
                 <Route exact path="/aboutme" component={Aboutme}></Route>
                 <Route exact path="/resume" component={Resume}></Route>
                 <Route exact path="/projects" component={Projects}></Route>
@@ -49,8 +68,8 @@ function App() {
                   path="/transcripts"
                   component={Transcripts}
                 ></Route>
-              </Switch>
-            </div>
+              </div>
+            </Switch>
           </main>
           <footer>
             <Footer />

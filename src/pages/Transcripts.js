@@ -1,15 +1,13 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Box } from '@material-ui/core';
 import React from 'react';
 import { useEffect } from 'react';
 // import transcript from '../components/transcripts/transcript.html';
 
 const useStyles = makeStyles(() => ({
-  pdf: {
+  transcriptBox: {
+    minHeight: '100%',
     height: '100%',
-    width: '100%',
-    margin: 0,
-    padding: 0,
-    minHeight: '50vh',
+    flexGrow: 3,
   },
 }));
 
@@ -21,13 +19,14 @@ function Transcripts() {
   }, []);
 
   return (
-    <div className={classes.pdf}>
+    <div className={classes.transcriptBox}>
       <h2> Transcript </h2>
       <iframe
-        src="https://docs.google.com/document/d/e/2PACX-1vSgEfLJiadLFS6jXSMz3A78RS7hZ2iUKRIguAyan6gbDwp479JR49ilXD0BXwGZjruA-NtkS7ZIq1Ig/pub"
-        height="500"
+        src="https://drive.google.com/file/d/1kduX6h2OnmnQjsTRhkafrwUc3Nee3B8y/preview"
         width="100%"
+        height="100%"
       ></iframe>
+      {/* <Box color="secondary"></Box> */}
     </div>
   );
 }

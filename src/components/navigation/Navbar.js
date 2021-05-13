@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
   contactButtonContainer: {
     justifyItems: 'center',
   },
+  a: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
 }));
 
 function Navbar() {
@@ -47,17 +51,10 @@ function Navbar() {
       index: 1,
       url: '/aboutme',
     },
-    resume: {
-      index: 2,
-      url: '/resume',
-    },
+
     projects: {
-      index: 3,
+      index: 2,
       url: '/projects',
-    },
-    transcripts: {
-      index: 4,
-      url: '/transcripts',
     },
   };
 
@@ -65,18 +62,12 @@ function Navbar() {
 
   const [value, setValue] = React.useState(0);
 
-  const [selected, setSelected] = React.useState(-1);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
-  };
-
-  const updateSelected = (index) => {
-    setSelected(index);
   };
 
   const handleClose = () => {
@@ -117,12 +108,7 @@ function Navbar() {
           </IconButton>
         </div>
         <Tabs value={value} onChange={handleChange}>
-          <Tab
-            component={Link}
-            to={items.aboutMe.url}
-            onClick={() => updateSelected(items.aboutMe.url)}
-            label="About Me"
-          />
+          <Tab component={Link} to={items.aboutMe.url} label="About Me" />
           <Tab label="Portfolio" onClick={handleClick} />
         </Tabs>
         <StyledMenu
@@ -135,30 +121,25 @@ function Navbar() {
           <MenuItem
             classes={{ selected: classes.selected }}
             component={Link}
-            to={items.resume.url}
-            selected={selected === items.resume.index}
-            onClick={() => updateSelected(items.resume.index)}
-          >
-            <ListItemText primary="Resume" />
-          </MenuItem>
-          <MenuItem
-            classes={{ selected: classes.selected }}
-            component={Link}
             to={items.projects.url}
-            selected={selected === items.projects.index}
-            onClick={() => updateSelected(items.projects.index)}
           >
             <ListItemText primary="Projects" />
           </MenuItem>
-          <MenuItem
-            classes={{ selected: classes.selected }}
-            component={Link}
-            to={items.transcripts.url}
-            selected={selected === items.transcripts.index}
-            onClick={() => updateSelected(items.transcripts.index)}
+          <a href="" className={classes.a}>
+            <MenuItem classes={{ selected: classes.selected }}>
+              <ListItemText primary="Resume" />
+            </MenuItem>
+          </a>
+
+          <a
+            className={classes.a}
+            href="https://drive.google.com/file/d/1kduX6h2OnmnQjsTRhkafrwUc3Nee3B8y/preview"
+            target="_blank"
           >
-            <ListItemText primary="Transcripts" />
-          </MenuItem>
+            <MenuItem classes={{ selected: classes.selected }}>
+              <ListItemText primary="Transcripts" />
+            </MenuItem>
+          </a>
         </StyledMenu>
       </Toolbar>
     </AppBar>

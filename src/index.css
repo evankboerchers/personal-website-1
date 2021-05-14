@@ -5,3 +5,7 @@ html {
   min-height: 100%;
   background-color: grey;
 }
+
+a {
+  color: rgb(91, 171, 218);
+}

@@ -61,13 +61,8 @@ function App() {
               <Route exact path="/" component={Home}></Route>
               <div className={classes.contentWrap}>
                 <Route exact path="/aboutme" component={Aboutme}></Route>
-                <Route exact path="/resume" component={Resume}></Route>
                 <Route exact path="/projects" component={Projects}></Route>
-                <Route
-                  exact
-                  path="/transcripts"
-                  component={Transcripts}
-                ></Route>
+                <Route exact path="/resume" component={Resume}></Route>
               </div>
             </Switch>
           </main>

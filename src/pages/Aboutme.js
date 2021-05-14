@@ -1,4 +1,11 @@
-import { Grid, Box, Paper, makeStyles } from '@material-ui/core';
+import {
+  Grid,
+  Box,
+  Paper,
+  makeStyles,
+  Divider,
+  Typography,
+} from '@material-ui/core';
 import React from 'react';
 import { useEffect } from 'react';
 import Bio from '../components/aboutme/Bio';
@@ -18,22 +25,29 @@ function Aboutme() {
 
   return (
     <div>
-      <Grid container spacing={5}>
-        <Grid item md={8}>
+      <Grid container>
+        <Grid item xs={8}>
           <Paper className={classes.bioPaper} elevation={elevation}>
             <Bio />
           </Paper>
         </Grid>
-        <Grid item md={4}>
-          <Box mt={5} p={2}>
+        <Grid item xs={4}>
+          <Box>
             <Paper elevation={elevation}>
               <Portrait />
+              <Divider />
+              <div>
+                <Typography>
+                  <strong>Location: </strong> Calgary, AB
+                </Typography>
+                <Typography>
+                  <strong> Age: </strong> 23
+                </Typography>
+              </div>
             </Paper>
           </Box>
         </Grid>
       </Grid>
-      <h1> Test</h1>
-      <h1> Test</h1>
     </div>
   );
 }

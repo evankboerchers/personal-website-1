@@ -69,10 +69,14 @@ function Footer() {
           <Box className={classes.contactBox}>
             <Grid container>
               <Grid item xs={12}>
-                <Typography>Email: eboerchers@yahoo.ca</Typography>
+                <Typography>
+                  <strong>Email: eboerchers@yahoo.ca</strong>
+                </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography>Phone: (403) 461-9531</Typography>
+                <Typography>
+                  <strong>Phone: (403) 461-9531 </strong>
+                </Typography>
               </Grid>
             </Grid>
           </Box>

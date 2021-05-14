@@ -8,7 +8,8 @@ const useStyles = makeStyles({
   homeContainer: {
     position: 'relative',
     minHeight: '100%',
-    display: 'flex',
+    minWidth: '100%',
+    display: 'inline',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',

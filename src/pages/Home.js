@@ -1,34 +1,35 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import { useEffect } from 'react';
-import bgImage from '../assets/images/home_background.jpg';
+import bgImage from '../assets/images/home_background.png';
 import Quote from '../components/home/Quote.js';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   homeContainer: {
     position: 'relative',
-    minHeight: '100%',
-    minWidth: '100%',
-    display: 'inline',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
     overflow: 'hidden',
+    backgroundImage: `url(${bgImage})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
   },
 
-  bgImage: {
-    margin: 'auto',
-    filter: 'brightness(50%)',
-  },
   quoteBox: {
-    position: 'absolute',
+    backdropFilter: 'brightness(40%)',
+    borderRadius: theme.spacing(1),
+    margin: theme.spacing(2),
   },
-});
+}));
 
 function Home() {
   const classes = useStyles();
-
-  const text = 'Sample Quote';
 
   useEffect(() => {
     console.log('Home page');
@@ -36,7 +37,6 @@ function Home() {
 
   return (
     <div className={classes.homeContainer}>
-      {/* <img className={classes.bgImage} src={bgImage} /> */}
       <div className={classes.quoteBox}>
         <Quote />
       </div>

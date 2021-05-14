@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import { Container, Box, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 import Navbar from './components/navigation/Navbar';
 import Footer from './components/footer/Footer';
@@ -11,7 +11,6 @@ import Home from './pages/Home';
 import Aboutme from './pages/Aboutme';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
-import Transcripts from './pages/Transcripts';
 
 import theme from './theme.js';
 import { ThemeProvider } from '@material-ui/core';
@@ -22,9 +21,6 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
     width: '100%',
     padding: 0,
-    boxSizing: 'border-box',
-    overflowX: 'hidden',
-    overflowY: 'hidden',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
@@ -39,12 +35,19 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 64,
       paddingBottom: 110,
     },
+
+    position: 'relative',
     width: '100%',
     height: '100%',
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
     overflow: 'hidden',
   },
   contentWrap: {
-    margin: 20,
+    maxWidth: 1366,
+    margin: theme.spacing(3),
   },
 }));
 

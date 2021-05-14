@@ -6,18 +6,21 @@ import {
   Divider,
   Typography,
 } from '@material-ui/core';
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Bio from '../components/aboutme/Bio';
-import Portrait from '../components/aboutme/Portrait';
+import portrait from '../assets/images/portrait_1.png';
 
 const elevation = 5;
 
 const useStyles = makeStyles((theme) => ({
   bioPaper: {
     padding: theme.spacing(2),
+    height: '100%',
   },
-  portraitPaper: {},
+  portraitPaper: {
+    padding: theme.spacing(2),
+    height: '100%',
+  },
 }));
 
 function Aboutme() {
@@ -25,7 +28,7 @@ function Aboutme() {
 
   return (
     <div>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={8}>
           <Paper className={classes.bioPaper} elevation={elevation}>
             <Bio />
@@ -33,8 +36,8 @@ function Aboutme() {
         </Grid>
         <Grid item xs={4}>
           <Box>
-            <Paper elevation={elevation}>
-              <Portrait />
+            <Paper className={classes.portraitPaper} elevation={elevation}>
+              <img src={portrait} width="100%" alt="photo of Evan"></img>
               <Divider />
               <div>
                 <Typography>

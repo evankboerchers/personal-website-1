@@ -4,12 +4,9 @@ import {
   makeStyles,
   Divider,
   Grid,
-  Box,
   Hidden,
-  FilledInput,
 } from '@material-ui/core';
 import React from 'react';
-import { useEffect } from 'react';
 
 import PersonalWebsiteImg from '../assets/images/projects/personal_website.png';
 import SpringFrameworkImg from '../assets/images/projects/spring_framework.png';
@@ -21,11 +18,11 @@ const elevation = 5;
 
 const useStyles = makeStyles((theme) => ({
   titlePaper: {
-    padding: 20,
+    padding: theme.spacing(3),
   },
   projectPaper: {
-    padding: 20,
-    marginTop: 20,
+    padding: theme.spacing(3),
+    marginTop: theme.spacing(2),
   },
   titleDiv: {
     marginTop: 10,
@@ -45,10 +42,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Projects() {
-  useEffect(() => {
-    console.log('Projects');
-  }, []);
-
   const classes = useStyles();
 
   const PersonalWebsite = () => (
@@ -286,9 +279,9 @@ function Projects() {
         <Typography variant="h4">Projects</Typography>
         <Divider className={classes.titleDiv} />
         <Typography>
-          Experienced matters, here are some of the projects I have worked on
-          over the last year. These are not the only projects I have worked on
-          but they are noteworthy and cover various topics.
+          Experienc matters, here are some of the projects I have worked on over
+          the last year. These are not the only projects I have worked on but
+          they are noteworthy and cover various topics.
         </Typography>
       </Paper>
       <PersonalWebsite />

@@ -1,11 +1,9 @@
 import React from 'react';
 import {
   AppBar,
-  Button,
   IconButton,
   Menu,
   Toolbar,
-  Typography,
   ListItemText,
   MenuItem,
   Icon,
@@ -13,8 +11,6 @@ import {
   Tabs,
   Tab,
 } from '@material-ui/core';
-
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'react-router-dom';
 import LogoIcon from './EKB-logo.svg';
 

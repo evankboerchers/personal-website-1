@@ -1,25 +1,24 @@
-import { queryByTitle } from '@testing-library/dom';
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { makeStyles, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   quoteBox: {
     maxWidth: 500,
-    margin: 30,
+    margin: theme.spacing(3),
     color: 'white',
   },
 
   quote: {
-    marginTop: 20,
+    marginTop: theme.spacing(2),
     fontSize: '1.4rem',
     fontStyle: 'italic',
     fontFamily: 'American Typewriter, serif',
   },
 
   author: {
-    marginTop: 20,
-    marginRight: 20,
+    marginTop: theme.spacing(2),
+    marginRight: theme.spacing(2),
     fontSize: '1.2rem',
     fontFamily: 'American Typewriter, serif',
   },

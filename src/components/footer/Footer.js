@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     left: 0,
     margin: 0,
-    paddingBottom: 10,
+    paddingBottom: theme.spacing(2),
+    paddingTop: theme.spacing(1),
     width: '100%',
     [theme.breakpoints.down('xs')]: {
       height: 150,
@@ -18,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
       height: 100,
     },
     backgroundColor: theme.palette.primary.main,
-    borderTop: '4px solid ' + theme.palette.secondary.main,
-    color: 'white',
+    borderTop: theme.spacing(0.5) + 'px solid ' + theme.palette.secondary.main,
+    color: theme.palette.text.secondary,
     justifyContent: 'center',
     display: 'flex',
   },
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titleBox: {
     textAlign: 'center',
-    borderBottom: '2px solid white',
+    borderBottom: '2px solid ' + theme.palette.text.secondary,
     marginBottom: 10,
   },
   icon: {
@@ -70,12 +71,12 @@ function Footer() {
             <Grid container>
               <Grid item xs={12}>
                 <Typography>
-                  <strong>Email: eboerchers@yahoo.ca</strong>
+                  <strong>Email: &nbsp;eboerchers@yahoo.ca</strong>
                 </Typography>
               </Grid>
               <Grid item xs={12}>
                 <Typography>
-                  <strong>Phone: (403) 461-9531 </strong>
+                  <strong>Phone: &nbsp; (403) 461-9531</strong>
                 </Typography>
               </Grid>
             </Grid>

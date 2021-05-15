@@ -37,7 +37,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
   },
   strong: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.info.main,
+  },
+  spaceBottom: {
+    marginBottom: theme.spacing(0.5),
   },
 }));
 
@@ -46,11 +49,13 @@ function Projects() {
 
   const PersonalWebsite = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
-      <Typography variant="h6"> Personal Website</Typography>
+      <Typography variant="h6" color="textSecondary">
+        Personal Website
+      </Typography>
       <Divider className={classes.titleDiv} />
       <Grid container>
         <Grid item sm={8}>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://github.com/evankboerchers/personal-website-1"
               target="_blank"
@@ -58,18 +63,17 @@ function Projects() {
               Github Repository
             </a>
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             This project is self-explanatory, it is simply the website you are
             currently viewing. To build this website I used React with native
             Javascript, HTML, CSS and Material-ui to help with providing some
             functional components.
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Frontend, Web Design
           </Typography>
-          <Typography></Typography>
           <Typography>
             <strong className={classes.strong}>Skills: </strong> Javascript,
             HTML, CSS, React, Material-ui, Netify, Axios, Github
@@ -88,11 +92,14 @@ function Projects() {
 
   const SpringFrameworkEvaluation = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
-      <Typography variant="h6"> Spring Framework Evaluation</Typography>
+      <Typography variant="h6" color="textSecondary">
+        {' '}
+        Spring Framework Evaluation
+      </Typography>
       <Divider className={classes.titleDiv} />
       <Grid container>
         <Grid item sm={8}>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://github.com/evankboerchers/SpringChicken"
               target="_blank"
@@ -100,7 +107,7 @@ function Projects() {
               Github Repository
             </a>
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             This project was my Capstone Project for my Masters in Software
             Engineering. The purpose of this project was to learn the Spring
@@ -110,12 +117,12 @@ function Projects() {
             sponsors to determine if this framework would be a viable option for
             them.
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Backend, API design, Authorization, Data Persistence, Multi-layer
             Architecture, Testing, Method Caching
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Java, Spring,
             Docker, mySQL, JPA, JDBC, Github
           </Typography>
@@ -133,11 +140,14 @@ function Projects() {
 
   const PlantDiseaseCNN = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
-      <Typography variant="h6"> Plant Disease Image Classification</Typography>
+      <Typography variant="h6" color="textSecondary">
+        {' '}
+        Plant Disease Image Classification
+      </Typography>
       <Divider className={classes.titleDiv} />
       <Grid container>
         <Grid item sm={8}>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://github.com/thelisazhao/ENEL645_PlantDiseaseDetection"
               target="_blank"
@@ -145,7 +155,7 @@ function Projects() {
               Github Repository
             </a>
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             This project is inspired by a Kaggle challenge. Using Convolutional
             Neural Networks we were able to classify potato, tomato and bell
@@ -153,11 +163,11 @@ function Projects() {
             Tensorflow library a classification accuracy of 99% percent was
             achieved in classifying the plant disease for each plant type.
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Machine Learning, Image Classification, Neural Networks, CNN
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Python,
             Tensorflow, Jupyter Notebooks
           </Typography>
@@ -175,11 +185,14 @@ function Projects() {
 
   const CourseOutlineBuilder = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
-      <Typography variant="h6"> Course Outline Builder</Typography>
+      <Typography variant="h6" color="textSecondary">
+        {' '}
+        Course Outline Builder
+      </Typography>
       <Divider className={classes.titleDiv} />
       <Grid container>
         <Grid item sm={8}>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://github.com/thelisazhao/ENEL645_PlantDiseaseDetection"
               target="_blank"
@@ -187,7 +200,7 @@ function Projects() {
               Github Repository
             </a>
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             This project was a very early stage concept for a course outline
             builder than could be used to build and save course outlines at the
@@ -195,11 +208,11 @@ function Projects() {
             connects to the backend Django server which serves as the api to get
             and post all information.
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Full-Stack, Web Design, Api Design
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Javascript,
             HTML, CSS, React, Python, Django, Axios, Github
           </Typography>
@@ -217,13 +230,13 @@ function Projects() {
 
   const ClassificationOfReadme = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
-      <Typography variant="h6">
+      <Typography variant="h6" color="textSecondary">
         Classification of Github README Sections
       </Typography>
       <Divider className={classes.titleDiv} />
       <Grid container>
         <Grid item sm={8}>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4985770712986055/1653466948958185/3712725817297160/latest.html"
               target="_blank"
@@ -231,7 +244,7 @@ function Projects() {
               Databricks Notebook
             </a>
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <a
               href="https://github.com/evankboerchers/ENSF612-Project"
               target="_blank"
@@ -241,7 +254,7 @@ function Projects() {
             - (only contains helper scripts)
           </Typography>
 
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             In this project we tasked ourselves with classifying Github README
             sections into either 'how' or 'not how' based on the sections
@@ -252,12 +265,12 @@ function Projects() {
             and predictions on new readme sections were obtained. The best model
             achieved an accuracy of 87% for its predictions.
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Machine Learning, Big Data, Data Extraction, Model Tuning, Data
             Analytics
           </Typography>
-          <Typography>
+          <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Python,
             PySpark, Pandas, Databricks
           </Typography>
@@ -276,12 +289,14 @@ function Projects() {
   return (
     <div>
       <Paper className={classes.titlePaper} elevation={5}>
-        <Typography variant="h4">Projects</Typography>
+        <Typography variant="h4" color="textSecondary">
+          Projects
+        </Typography>
         <Divider className={classes.titleDiv} />
         <Typography>
-          Experienc matters, here are some of the projects I have worked on over
-          the last year. These are not the only projects I have worked on but
-          they are noteworthy and cover various topics.
+          Experience matters, here are some of the projects I have worked on
+          over the last year. These are not the only projects I have worked on
+          but they are noteworthy and cover various topics.
         </Typography>
       </Paper>
       <PersonalWebsite />

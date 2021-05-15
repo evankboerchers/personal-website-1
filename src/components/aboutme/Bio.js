@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justify: 'left',
   },
   divider: {
-    borderBottom: '6px solid' + theme.palette.secondary.main,
+    borderBottom: 'inherit',
   },
 }));
 
@@ -18,8 +18,11 @@ function Bio() {
 
   return (
     <div>
-      <Typography variant="h4">Evan Boerchers</Typography>
+      <Typography variant="h4" color="textSecondary">
+        Evan Boerchers
+      </Typography>
       <hr className={classes.divider} />
+
       <Typography className={classes.bioText}>
         <p>
           Hi, I am Evan and I made this website for two reasons. One, I wanted

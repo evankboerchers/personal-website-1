@@ -10,13 +10,15 @@ import {
   makeStyles,
   Tabs,
   Tab,
+  Typography,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import LogoIcon from './EKB-logo.svg';
+import HomeIcon from '@material-ui/icons/Home';
+import Home from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
   styledMenu: {
-    border: '1px solid #d3d4d5',
+    border: '1px solid ' + theme.palette.text.secondary,
     backgroundColor: theme.palette.background.default,
   },
   logoImage: {
@@ -28,10 +30,11 @@ const useStyles = makeStyles((theme) => ({
     borderTop: '1px solid' + theme.palette.secondary.light,
     borderBottom: '1px solid' + theme.palette.secondary.light,
   },
-  homeButtonContainer: {},
-  tabsContainer: {},
-  contactButtonContainer: {
-    justifyItems: 'center',
+  homeIcon: {
+    color: theme.palette.secondary.light,
+  },
+  tabsContainer: {
+    marginLeft: theme.spacing(2),
   },
   a: {
     color: 'inherit',
@@ -90,20 +93,20 @@ function Navbar() {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <div>
-          <IconButton id="home-button" component={Link} to="/">
-            <Icon>
-              <div>
-                <img
-                  className={classes.logoImage}
-                  alt="home logo"
-                  src={LogoIcon}
-                />
-              </div>
-            </Icon>
-          </IconButton>
-        </div>
-        <Tabs value={value} onChange={handleChange}>
+        <IconButton
+          id="home-button"
+          value={value}
+          component={Link}
+          to="/"
+          onClick={handleChange}
+        >
+          <HomeIcon className={classes.homeIcon} />
+        </IconButton>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          className={classes.tabsContainer}
+        >
           <Tab component={Link} to={items.aboutMe.url} label="About Me" />
           <Tab label="Portfolio" onClick={handleClick} />
         </Tabs>
@@ -129,7 +132,7 @@ function Navbar() {
 
           <a
             className={classes.a}
-            href="https://drive.google.com/file/d/1kduX6h2OnmnQjsTRhkafrwUc3Nee3B8y/preview"
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:e0cb3ccd-298f-4d80-9594-1bbeb7d72a9b"
             target="_blank"
           >
             <MenuItem classes={{ selected: classes.selected }}>

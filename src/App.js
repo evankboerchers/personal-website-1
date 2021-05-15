@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Box } from '@material-ui/core';
 
 import Navbar from './components/navigation/Navbar';
 import Footer from './components/footer/Footer';
@@ -29,11 +29,11 @@ const useStyles = makeStyles((theme) => ({
   mainWrap: {
     [theme.breakpoints.down('xs')]: {
       paddingTop: 56,
-      paddingBottom: 160,
+      paddingBottom: 150 + theme.spacing(3.5),
     },
     [theme.breakpoints.up('sm')]: {
       paddingTop: 64,
-      paddingBottom: 110,
+      paddingBottom: 100 + theme.spacing(3.5),
     },
 
     position: 'relative',
@@ -57,7 +57,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className={classes.pageContainer}>
+        <Box
+          className={classes.pageContainer}
+          bgcolor={theme.palette.background.default}
+        >
           <Navbar />
           <main className={classes.mainWrap}>
             <Switch>
@@ -72,7 +75,7 @@ function App() {
           <footer>
             <Footer />
           </footer>
-        </div>
+        </Box>
       </Router>
     </ThemeProvider>
   );

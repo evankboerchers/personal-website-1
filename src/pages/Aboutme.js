@@ -54,6 +54,15 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 300,
   },
+  author: {
+    display: 'inline',
+    fontSize: '0.9rem',
+    fontStyle: 'italic',
+  },
+  title: {
+    display: 'inline',
+    fontSize: '0.9rem',
+  },
 }));
 
 function Aboutme() {
@@ -102,17 +111,24 @@ function Aboutme() {
             <strong className={classes.strong}>
               Favourite thing about Engineering? &nbsp;
             </strong>
-            Seeing the ideas in my head come into reality
+            Seeing the ideas in my head come into reality.
+          </Typography>
+          <Typography>
+            <strong className={classes.strong}>
+              Skills I want to learn? &nbsp;
+            </strong>
+            I want to learn to code Ruby, speak a second language, and how to
+            juggle.
           </Typography>
           <Typography>
             <strong className={classes.strong}>Favourite band? &nbsp;</strong>
-            Led Zeppelin
+            Led Zeppelin.
           </Typography>
           <Typography>
             <strong className={classes.strong}>
               Light or Dark theme? &nbsp;
             </strong>
-            Dark all the way
+            Dark all the way.
           </Typography>
         </Typography>
       </div>
@@ -130,10 +146,10 @@ function Aboutme() {
             <div className={classes.bookImgWrap}>
               <img src={book} className={classes.bookImg} alt="book" />
             </div>
-            <Typography className={classes.bookTitleType}>
+            <Typography className={classes.title}>
               Crime and Punishment
             </Typography>
-            <Typography className={classes.bookAuthorType}>
+            <Typography className={classes.author}>
               Fyodor Dostoevsky
             </Typography>
           </div>

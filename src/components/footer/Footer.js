@@ -88,6 +88,7 @@ function Footer() {
               className={classes.a}
               href="https://www.linkedin.com/in/evan-boerchers/"
               target="_blank"
+              rel="noreferrer"
             >
               <LinkedInIcon className={classes.icon} />
             </a>
@@ -96,6 +97,7 @@ function Footer() {
               className={classes.a}
               href="https://github.com/evankboerchers"
               target="_blank"
+              rel="noreferrer"
             >
               <GitHubIcon className={classes.icon} />
             </a>

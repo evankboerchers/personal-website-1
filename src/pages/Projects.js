@@ -59,6 +59,7 @@ function Projects() {
             <a
               href="https://github.com/evankboerchers/personal-website-1"
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -82,7 +83,11 @@ function Projects() {
         <Hidden xsDown>
           <Grid item sm={4}>
             <div className={classes.imgWrap}>
-              <img className={classes.img} src={PersonalWebsiteImg}></img>
+              <img
+                className={classes.img}
+                src={PersonalWebsiteImg}
+                alt="react logo"
+              />
             </div>
           </Grid>
         </Hidden>
@@ -93,7 +98,6 @@ function Projects() {
   const SpringFrameworkEvaluation = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
       <Typography variant="h6" color="textSecondary">
-        {' '}
         Spring Framework Evaluation
       </Typography>
       <Divider className={classes.titleDiv} />
@@ -103,6 +107,7 @@ function Projects() {
             <a
               href="https://github.com/evankboerchers/SpringChicken"
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -130,7 +135,11 @@ function Projects() {
         <Hidden xsDown>
           <Grid item sm={4}>
             <div className={classes.imgWrap}>
-              <img className={classes.img} src={SpringFrameworkImg}></img>
+              <img
+                className={classes.img}
+                src={SpringFrameworkImg}
+                alt="spring logo"
+              />
             </div>
           </Grid>
         </Hidden>
@@ -151,6 +160,7 @@ function Projects() {
             <a
               href="https://github.com/thelisazhao/ENEL645_PlantDiseaseDetection"
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -175,7 +185,11 @@ function Projects() {
         <Hidden xsDown>
           <Grid item sm={4}>
             <div className={classes.imgWrap}>
-              <img className={classes.img} src={PlantDiseaseImg}></img>
+              <img
+                className={classes.img}
+                src={PlantDiseaseImg}
+                alt="tensorflow logo"
+              />
             </div>
           </Grid>
         </Hidden>
@@ -196,6 +210,7 @@ function Projects() {
             <a
               href="https://github.com/thelisazhao/ENEL645_PlantDiseaseDetection"
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -220,7 +235,11 @@ function Projects() {
         <Hidden xsDown>
           <Grid item sm={4}>
             <div className={classes.imgWrap}>
-              <img className={classes.img} src={CourseOutlineImg}></img>
+              <img
+                className={classes.img}
+                src={CourseOutlineImg}
+                alt="django/python logo"
+              />
             </div>
           </Grid>
         </Hidden>
@@ -240,6 +259,7 @@ function Projects() {
             <a
               href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4985770712986055/1653466948958185/3712725817297160/latest.html"
               target="_blank"
+              rel="noreferrer"
             >
               Databricks Notebook
             </a>
@@ -248,6 +268,7 @@ function Projects() {
             <a
               href="https://github.com/evankboerchers/ENSF612-Project"
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -278,7 +299,11 @@ function Projects() {
         <Hidden xsDown>
           <Grid item sm={4}>
             <div className={classes.imgWrap}>
-              <img className={classes.img} src={ReadmeClassificationImg}></img>
+              <img
+                className={classes.img}
+                src={ReadmeClassificationImg}
+                alt="pyspark logo"
+              />
             </div>
           </Grid>
         </Hidden>

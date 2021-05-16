@@ -6,15 +6,12 @@ import {
   Toolbar,
   ListItemText,
   MenuItem,
-  Icon,
   makeStyles,
   Tabs,
   Tab,
-  Typography,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
-import Home from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
   styledMenu: {
@@ -124,7 +121,12 @@ function Navbar() {
           >
             <ListItemText primary="Projects" />
           </MenuItem>
-          <a href="" className={classes.a}>
+          <a
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:4d372aaf-5468-47d8-b401-662237d2e12d"
+            target="_blank"
+            rel="noreferrer"
+            className={classes.a}
+          >
             <MenuItem classes={{ selected: classes.selected }}>
               <ListItemText primary="Resume" />
             </MenuItem>
@@ -132,8 +134,9 @@ function Navbar() {
 
           <a
             className={classes.a}
-            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:e0cb3ccd-298f-4d80-9594-1bbeb7d72a9b"
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:6b4666e0-9dd2-477e-a0ad-1d46fc6a7062"
             target="_blank"
+            rel="noreferrer"
           >
             <MenuItem classes={{ selected: classes.selected }}>
               <ListItemText primary="Transcripts" />

@@ -8,3 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##  WIP, Features to add
 
 - Make multipage
+- Improve responsive design

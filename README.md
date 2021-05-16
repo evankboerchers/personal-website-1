@@ -9,3 +9,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Make multipage
 - Improve responsive design
+- Improve quote api get. Potentially automate quote element creation so user side api requests not needed,

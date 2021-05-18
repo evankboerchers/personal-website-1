@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   infoBox: {
     marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   bookContainer: {
     display: 'flex',
@@ -160,7 +161,7 @@ function Aboutme() {
 
   return (
     <Paper className={classes.paper} elevation={elevation}>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         <BioItem />
         <PortraitItem />
         <ReadingItem />

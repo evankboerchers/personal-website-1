@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
   spaceBottom: {
     marginBottom: theme.spacing(0.5),
   },
+  descriptor: {
+    display: 'inline',
+    fontSize: '0.8rem',
+  },
 }));
 
 function Projects() {
@@ -67,9 +71,9 @@ function Projects() {
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
             This project is self-explanatory, it is simply the website you are
-            currently viewing. To build this website I used React with native
-            Javascript, HTML, CSS and Material-ui to help with providing some
-            functional components.
+            currently viewing. I built this website from scratch using native
+            React with Javascript, HTML, CSS and Material-ui to help with
+            providing some functional components.
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
@@ -114,22 +118,30 @@ function Projects() {
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Description: </strong>
-            This project was my Capstone Project for my Masters in Software
-            Engineering. The purpose of this project was to learn the Spring
-            framework and design a demo service. This service was presented to
-            our project sponsor and was catered to their requirements. Our
-            findings aswell as our demo service served as a test for our
-            sponsors to determine if this framework would be a viable option for
-            them.
+            This project was my Capstone project for my Masters in Software
+            Engineering. This project was done in conjunction with our sponsor
+            Pason Systems who wanted to evaluate the viability of Java
+            frameworks for their web service. Our findings aswell as our demo
+            service served as a test for our sponsors to determine if this
+            framework would be a viable option for them.
+            <strong> Our codebase includes:</strong>
+            <ul>
+              <li>Controllers to handle api requests </li>
+              <li>Authorization token security </li>
+              <li>Demo test suites for web layer/ data layer testing</li>
+              <li>Docker containers for mySQL(database) and Redis(caching)</li>
+              <li>JPA data layer</li>
+              <li>And more!</li>
+            </ul>
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
             Backend, API design, Authorization, Data Persistence, Multi-layer
-            Architecture, Testing, Method Caching
+            Architecture, Testing, Method Caching, Testing
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Java, Spring,
-            Docker, mySQL, JPA, JDBC, Github
+            Docker, mySQL, JPA, JDBC, Junit, Mockito, Github
           </Typography>
         </Grid>
         <Hidden xsDown>
@@ -150,7 +162,6 @@ function Projects() {
   const PlantDiseaseCNN = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
       <Typography variant="h6" color="textSecondary">
-        {' '}
         Plant Disease Image Classification
       </Typography>
       <Divider className={classes.titleDiv} />
@@ -171,11 +182,14 @@ function Projects() {
             Neural Networks we were able to classify potato, tomato and bell
             pepper plants leafs into healthy or diseased categories. Using the
             Tensorflow library a classification accuracy of 99% percent was
-            achieved in classifying the plant disease for each plant type.
+            achieved in classifying the plant disease for each plant type in the
+            Kaggle dataset. Potential uses for this project would be the
+            development of disease detection software.
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>
-            Machine Learning, Image Classification, Neural Networks, CNN
+            Machine Learning, Image Classification, Deep Learning, Neural
+            Networks, CNN
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Python,
@@ -200,7 +214,6 @@ function Projects() {
   const CourseOutlineBuilder = () => (
     <Paper className={classes.projectPaper} elevation={elevation}>
       <Typography variant="h6" color="textSecondary">
-        {' '}
         Course Outline Builder
       </Typography>
       <Divider className={classes.titleDiv} />
@@ -219,8 +232,8 @@ function Projects() {
             <strong className={classes.strong}> Description: </strong>
             This project was a very early stage concept for a course outline
             builder than could be used to build and save course outlines at the
-            University of Calgary. Included is a frontend react website that
-            connects to the backend Django server which serves as the api to get
+            University of Calgary. Included is a frontend React website that
+            connects to a backend Django server which serves as the api to get
             and post all information.
           </Typography>
           <Typography className={classes.spaceBottom}>
@@ -263,6 +276,10 @@ function Projects() {
             >
               Databricks Notebook
             </a>
+            <div className={classes.descriptor}>
+              {' '}
+              - Data processing, analysis, model training/predictions
+            </div>
           </Typography>
           <Typography className={classes.spaceBottom}>
             <a
@@ -272,7 +289,10 @@ function Projects() {
             >
               Github Repository
             </a>
-            - (only contains helper scripts)
+            <div className={classes.descriptor}>
+              {' '}
+              - README files and data extraction scripts
+            </div>
           </Typography>
 
           <Typography className={classes.spaceBottom}>
@@ -280,11 +300,11 @@ function Projects() {
             In this project we tasked ourselves with classifying Github README
             sections into either 'how' or 'not how' based on the sections
             contents. To do this we first manually gathered random README's from
-            Github and using a python script extracted sections were extracted.
-            These sections were then manual labeled. With PySpark the section
-            data and labels were used to train various machine learning models
-            and predictions on new readme sections were obtained. The best model
-            achieved an accuracy of 87% for its predictions.
+            Github and using a python script divided them into sections. These
+            sections were then manual labeled. With PySpark the section data and
+            labels were used to train various machine learning models. The best
+            model achieved an accuracy of 87% for its predictions on new README
+            files.
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}> Topics: </strong>

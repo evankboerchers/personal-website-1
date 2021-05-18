@@ -140,8 +140,9 @@ function Projects() {
             Architecture, Testing, Method Caching, Testing
           </Typography>
           <Typography className={classes.spaceBottom}>
-            <strong className={classes.strong}>Skills: </strong> Java, Spring,
-            Docker, mySQL, JPA, JDBC, Junit, Mockito, Github
+            <strong className={classes.strong}>Skills: </strong> Java, Gradle,
+            Spring, Docker, mySQL, JPA, JDBC, Junit, Mockito, Github, Agile
+            Development
           </Typography>
         </Grid>
         <Hidden xsDown>

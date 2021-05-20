@@ -80,8 +80,8 @@ function Projects() {
             Frontend, Web Design
           </Typography>
           <Typography>
-            <strong className={classes.strong}>Skills: </strong> Javascript,
-            HTML, CSS, React, Material-ui, Netify, Axios, Github
+            <strong className={classes.strong}>Skills: </strong> React.js,
+            Javascript, HTML, CSS, Material-ui, Netlify, Axios, Github
           </Typography>
         </Grid>
         <Hidden xsDown>
@@ -222,7 +222,7 @@ function Projects() {
         <Grid item sm={8}>
           <Typography className={classes.spaceBottom}>
             <a
-              href="https://github.com/thelisazhao/ENEL645_PlantDiseaseDetection"
+              href="https://github.com/deanjhkim/ENSF-607-Web-Development-Project"
               target="_blank"
               rel="noreferrer"
             >
@@ -243,7 +243,7 @@ function Projects() {
           </Typography>
           <Typography className={classes.spaceBottom}>
             <strong className={classes.strong}>Skills: </strong> Javascript,
-            HTML, CSS, React, Python, Django, Axios, Github
+            HTML, CSS, React.js, Python, Django, SQLite, Axios, Github
           </Typography>
         </Grid>
         <Hidden xsDown>
@@ -284,7 +284,7 @@ function Projects() {
           </Typography>
           <Typography className={classes.spaceBottom}>
             <a
-              href="https://github.com/evankboerchers/ENSF612-Project"
+              href="https://github.com/evankboerchers/Classification-of-Github-READMES"
               target="_blank"
               rel="noreferrer"
             >

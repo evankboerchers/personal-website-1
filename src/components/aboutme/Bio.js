@@ -38,7 +38,7 @@ function Bio() {
           under my belt I hope to start a career in the Software industry.
         </p>
         <p>
-          When i'm not at my computer you can probably find me playing drums,
+          When I'm not at my computer you can probably find me playing drums,
           reading a good book, having a drink with friends or if lucky, cooking
           up something tasty in the kitchen.
         </p>
@@ -47,12 +47,12 @@ function Bio() {
           <Divider />
         </Typography>
         <p>
-          Despite being relatively new to the software space I have learned lots
-          over the past year. The projects I have worked on over the past year
-          can be found on my <Link to="/projects">projects page</Link>.
+          Despite being relatively new to the software space I have learned a
+          lot over the past year. The projects I have worked can be found on my{' '}
+          <Link to="/projects">projects page</Link>.
         </p>
         <p>
-          I am extremely confident in my ability to learn fast and I dont have
+          I am extremely confident in my ability to learn fast and I don't have
           any problems picking up new technologies and skills.
         </p>
         <Typography variant="h6" color="textSecondary">
@@ -60,10 +60,10 @@ function Bio() {
           <Divider />
         </Typography>
         <p>
-          Ultimately I want to find a meaningful career as a software engineer.
-          I am intersted in both frontend and backend design, meaning that I
-          hope to be able to work as a full-stack developer at somepoint in the
-          future. I am currently looking for oppurtunities, and am willing to
+          Ultimately I want to find a meaningful career as a Software Engineer.
+          I am interested in both front-end and back-end design, meaning that I
+          hope to be able to work as a full-stack developer at some point in the
+          future. I am currently looking for oppurtunities, and I am willing to
           relocate for work. I am a US and Canadian citizen which should aid in
           any relocation. Please feel free to contact me if you have a position
           available!

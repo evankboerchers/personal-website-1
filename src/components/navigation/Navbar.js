@@ -122,7 +122,7 @@ function Navbar() {
             <ListItemText primary="Projects" />
           </MenuItem>
           <a
-            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:5134fbdc-899a-4cfe-afa8-b2631eafe8c8"
+            href="https://documentcloud.adobe.com/link/review/?uri=urn%3Aaaid%3Ascds%3AUS%3AZ_rdPLO8RguvD3ISJSv1uQ"
             target="_blank"
             rel="noreferrer"
             className={classes.a}

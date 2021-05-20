@@ -122,13 +122,24 @@ function Navbar() {
             <ListItemText primary="Projects" />
           </MenuItem>
           <a
-            href="https://documentcloud.adobe.com/link/review/?uri=urn%3Aaaid%3Ascds%3AUS%3AZ_rdPLO8RguvD3ISJSv1uQ"
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:9c1c893b-da1f-487f-98d7-2b941b8a04b0"
             target="_blank"
             rel="noreferrer"
             className={classes.a}
           >
             <MenuItem classes={{ selected: classes.selected }}>
-              <ListItemText primary="Resume" />
+              <ListItemText primary="Resume (One-Page)" />
+            </MenuItem>
+          </a>
+
+          <a
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:222fce11-b977-43e6-bdf8-57f4c2ae4896"
+            target="_blank"
+            rel="noreferrer"
+            className={classes.a}
+          >
+            <MenuItem classes={{ selected: classes.selected }}>
+              <ListItemText primary="Resume (Extended)" />
             </MenuItem>
           </a>
 

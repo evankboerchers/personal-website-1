@@ -13,6 +13,8 @@ import SpringFrameworkImg from '../assets/images/projects/spring_framework.png';
 import PlantDiseaseImg from '../assets/images/projects/plant_disease.png';
 import CourseOutlineImg from '../assets/images/projects/course_outline.png';
 import ReadmeClassificationImg from '../assets/images/projects/readme_classification.png';
+import SortingVisualizationImg from '../assets/images/projects/sorting-visualization.png';
+import VendingImg from '../assets/images/projects/virtual-vending-machine.png';
 
 const elevation = 5;
 
@@ -332,6 +334,122 @@ function Projects() {
     </Paper>
   );
 
+  const SortingVisualization = () => (
+    <Paper className={classes.projectPaper} elevation={elevation}>
+      <Typography variant="h6" color="textSecondary">
+        Sorting Algorithm Visualizer
+      </Typography>
+      <Divider className={classes.titleDiv} />
+      <Grid container>
+        <Grid item sm={8}>
+          <Typography className={classes.spaceBottom}>
+            <a
+              href="https://evankboerchers.github.io/sorting-visualization/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Webpage
+            </a>
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <a
+              href="https://github.com/evankboerchers/sorting-visualization"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github Repository
+            </a>
+          </Typography>
+
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Description: </strong>A webpage
+            that allows the user to visualize various sorting algorithms. User
+            can select different sorting methods, array sizes and sort speeds.
+            Upon clicking the 'sort' button the user is shown an animation of
+            the sorting algorithm as it goes through the required steps until
+            the array is completely sorted. All sorting algorithms were written
+            and animated using Javascript, HTML and CSS.
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Topics: </strong>
+            Sorting Algorithms, GUI design, Frontend, Animation
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}>Skills: </strong> Algorithms,
+            React, JavaScript, HTML, CSS, Git Pages
+          </Typography>
+        </Grid>
+        <Hidden xsDown>
+          <Grid item sm={4}>
+            <div className={classes.imgWrap}>
+              <img
+                className={classes.img}
+                src={SortingVisualizationImg}
+                alt="javascript logo"
+              />
+            </div>
+          </Grid>
+        </Hidden>
+      </Grid>
+    </Paper>
+  );
+
+  const VirtualVendingMachine = () => (
+    <Paper className={classes.projectPaper} elevation={elevation}>
+      <Typography variant="h6" color="textSecondary">
+        Virtual Vending Machine
+      </Typography>
+      <Divider className={classes.titleDiv} />
+      <Grid container>
+        <Grid item sm={8}>
+          <Typography className={classes.spaceBottom}>
+            <a
+              href="https://evankboerchers.github.io/virtual-vending-machine/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Webpage
+            </a>
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <a
+              href="https://github.com/evankboerchers/virtual-vending-machine"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github Repository
+            </a>
+          </Typography>
+
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Description: </strong>A simple
+            webpage that acts as a virtual command console to a vending machine.
+            Demonstrates a basic GUI application powered by JavaScript logic
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Topics: </strong>
+            GUI design, Frontend
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}>Skills: </strong> JavaScript,
+            HTML, CSS, Git Pages
+          </Typography>
+        </Grid>
+        <Hidden xsDown>
+          <Grid item sm={4}>
+            <div className={classes.imgWrap}>
+              <img
+                className={classes.img}
+                src={VendingImg}
+                alt="javascript logo"
+              />
+            </div>
+          </Grid>
+        </Hidden>
+      </Grid>
+    </Paper>
+  );
+
   return (
     <div>
       <Paper className={classes.titlePaper} elevation={5}>
@@ -346,7 +464,9 @@ function Projects() {
         </Typography>
       </Paper>
       <PersonalWebsite />
+      <SortingVisualization />
       <SpringFrameworkEvaluation />
+      <VirtualVendingMachine />
       <PlantDiseaseCNN />
       <CourseOutlineBuilder />
       <ClassificationOfReadme />

@@ -10,7 +10,8 @@ import Footer from './components/footer/Footer';
 import Home from './pages/Home';
 import Aboutme from './pages/Aboutme';
 import Resume from './pages/Resume';
-import Projects from './pages/Projects';
+import SoftwareProjects from './pages/SoftwareProjects';
+import MechanicalPortfolio from './pages/MechanicalPortfolio';
 
 import theme from './theme.js';
 import { ThemeProvider } from '@material-ui/core';
@@ -67,7 +68,16 @@ function App() {
               <Route exact path="/" component={Home}></Route>
               <div className={classes.contentWrap}>
                 <Route exact path="/aboutme" component={Aboutme}></Route>
-                <Route exact path="/projects" component={Projects}></Route>
+                <Route
+                  exact
+                  path="/softwareprojects"
+                  component={SoftwareProjects}
+                ></Route>
+                <Route
+                  exact
+                  path="/mechanicalportfolio"
+                  component={MechanicalPortfolio}
+                ></Route>
                 <Route exact path="/resume" component={Resume}></Route>
               </div>
             </Switch>

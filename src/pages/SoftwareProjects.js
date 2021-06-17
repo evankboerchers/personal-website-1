@@ -8,13 +8,14 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 
-import PersonalWebsiteImg from '../assets/images/projects/personal_website.png';
-import SpringFrameworkImg from '../assets/images/projects/spring_framework.png';
-import PlantDiseaseImg from '../assets/images/projects/plant_disease.png';
-import CourseOutlineImg from '../assets/images/projects/course_outline.png';
-import ReadmeClassificationImg from '../assets/images/projects/readme_classification.png';
-import SortingVisualizationImg from '../assets/images/projects/sorting-visualization.png';
-import VendingImg from '../assets/images/projects/virtual-vending-machine.png';
+import PersonalWebsiteImg from '../assets/images/software_projects/personal_website.png';
+import SpringFrameworkImg from '../assets/images/software_projects/spring_framework.png';
+import PlantDiseaseImg from '../assets/images/software_projects/plant_disease.png';
+import CourseOutlineImg from '../assets/images/software_projects/course_outline.png';
+import ReadmeClassificationImg from '../assets/images/software_projects/readme_classification.png';
+import SortingVisualizationImg from '../assets/images/software_projects/sorting-visualization.png';
+import VendingImg from '../assets/images/software_projects/virtual-vending-machine.png';
+import IOSAppImg from '../assets/images/software_projects/ios-app.png';
 
 const elevation = 5;
 
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Projects() {
+function SoftwareProjects() {
   const classes = useStyles();
 
   const PersonalWebsite = () => (
@@ -450,11 +451,54 @@ function Projects() {
     </Paper>
   );
 
+  const GroceriOSApp = () => (
+    <Paper className={classes.projectPaper} elevation={elevation}>
+      <Typography variant="h6" color="textSecondary">
+        Grocer iOS App
+      </Typography>
+      <Divider className={classes.titleDiv} />
+      <Grid container>
+        <Grid item sm={8}>
+          <Typography className={classes.spaceBottom}>
+            <a
+              href="https://github.com/evankboerchers/GroceriOSApp"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github Repository
+            </a>
+          </Typography>
+
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Description: </strong>An iOS app
+            that allows you to create and manage grocery lists. Built using
+            XCode and Swift/SwiftUI.
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}> Topics: </strong>
+            App design, iOS
+          </Typography>
+          <Typography className={classes.spaceBottom}>
+            <strong className={classes.strong}>Skills: </strong> Swift, SwiftUI,
+            XCode
+          </Typography>
+        </Grid>
+        <Hidden xsDown>
+          <Grid item sm={4}>
+            <div className={classes.imgWrap}>
+              <img className={classes.img} src={IOSAppImg} alt="swift logo" />
+            </div>
+          </Grid>
+        </Hidden>
+      </Grid>
+    </Paper>
+  );
+
   return (
     <div>
       <Paper className={classes.titlePaper} elevation={5}>
         <Typography variant="h4" color="textSecondary">
-          Projects
+          Software Projects
         </Typography>
         <Divider className={classes.titleDiv} />
         <Typography>
@@ -466,6 +510,7 @@ function Projects() {
       <PersonalWebsite />
       <SortingVisualization />
       <SpringFrameworkEvaluation />
+      <GroceriOSApp />
       <VirtualVendingMachine />
       <PlantDiseaseCNN />
       <CourseOutlineBuilder />
@@ -474,4 +519,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default SoftwareProjects;

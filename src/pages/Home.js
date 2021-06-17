@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   quoteBox: {
-    backdropFilter: 'brightness(40%)',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     borderRadius: theme.spacing(1),
     margin: theme.spacing(2),
   },

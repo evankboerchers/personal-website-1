@@ -48,13 +48,19 @@ function Navbar() {
       url: '/aboutme',
     },
 
-    projects: {
+    softwareprojects: {
       index: 2,
-      url: '/projects',
+      url: '/softwareprojects',
+    },
+
+    mechanicalportfolio: {
+      index: 3,
+      url: '/mechanicalportfolio',
     },
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [softwareAnchorEl, setSoftwareAnchorEl] = React.useState(null);
+  const [mechanicalAnchorEl, setMechanicalAnchorEl] = React.useState(null);
 
   const [value, setValue] = React.useState(-1);
 
@@ -62,12 +68,20 @@ function Navbar() {
     setValue(newValue);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleSoftwareClick = (event) => {
+    setSoftwareAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleSoftwareClose = () => {
+    setSoftwareAnchorEl(null);
+  };
+
+  const handleMechanicalClick = (event) => {
+    setMechanicalAnchorEl(event.currentTarget);
+  };
+
+  const handleMechanicalClose = () => {
+    setMechanicalAnchorEl(null);
   };
 
   const StyledMenu = (props) => (
@@ -99,25 +113,28 @@ function Navbar() {
         >
           <HomeIcon className={classes.homeIcon} />
         </IconButton>
+
         <Tabs
           value={value}
           onChange={handleChange}
           className={classes.tabsContainer}
         >
           <Tab component={Link} to={items.aboutMe.url} label="About Me" />
-          <Tab label="Portfolio" onClick={handleClick} />
+          <Tab label="Software Portfolio" onClick={handleSoftwareClick} />
+          <Tab label="Mechanical Portfolio" onClick={handleMechanicalClick} />
         </Tabs>
+
         <StyledMenu
-          id="portfolio-menu"
-          anchorEl={anchorEl}
+          id="software-portfolio-menu"
+          anchorEl={softwareAnchorEl}
           keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
+          open={Boolean(softwareAnchorEl)}
+          onClose={handleSoftwareClose}
         >
           <MenuItem
             classes={{ selected: classes.selected }}
             component={Link}
-            to={items.projects.url}
+            to={items.softwareprojects.url}
           >
             <ListItemText primary="Projects" />
           </MenuItem>
@@ -142,6 +159,39 @@ function Navbar() {
               <ListItemText primary="Resume (Extended)" />
             </MenuItem>
           </a>
+
+          <a
+            className={classes.a}
+            href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:6b4666e0-9dd2-477e-a0ad-1d46fc6a7062"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <MenuItem classes={{ selected: classes.selected }}>
+              <ListItemText primary="Transcripts" />
+            </MenuItem>
+          </a>
+        </StyledMenu>
+
+        <StyledMenu
+          id="mechanical-portfolio-menu"
+          anchorEl={mechanicalAnchorEl}
+          keepMounted
+          open={Boolean(mechanicalAnchorEl)}
+          onClose={handleMechanicalClose}
+        >
+          <MenuItem
+            classes={{ selected: classes.selected }}
+            component={Link}
+            to={items.mechanicalportfolio.url}
+          >
+            <ListItemText primary="Portfolio" />
+          </MenuItem>
+
+          {/* <a href="" target="_blank" rel="noreferrer" className={classes.a}>
+            <MenuItem classes={{ selected: classes.selected }}>
+              <ListItemText primary="Resume" />
+            </MenuItem>
+          </a> */}
 
           <a
             className={classes.a}

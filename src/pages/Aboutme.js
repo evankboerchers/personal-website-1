@@ -95,7 +95,7 @@ function Aboutme() {
               Calgary, AB
             </Typography>
             <Typography>
-              <strong className={classes.strong}> Age:&nbsp; </strong> 23
+              <strong className={classes.strong}> Age:&nbsp; </strong> 24
             </Typography>
           </Typography>
         </Grid>
